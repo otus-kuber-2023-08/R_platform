@@ -1,0 +1,6 @@
+nginxServer: "http://app.default.svc.cluster.local:80/basic_status"
+serviceMonitor:
+  enabled: true
+  namespace: "default"
+  additionalLabels:
+    release: prom-stack
