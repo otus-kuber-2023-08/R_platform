@@ -1,0 +1,51 @@
+= Инструкция по установке и настройке кластера
+
+
+== Установка зависимостей kubespray
+[source,bash]
+----
+$ pip install -r kubespray/requirements.txt
+----
+
+== Настроим Terraform переменные для доступа к Yandex Cloud
+
+[source,bash]
+----
+$ mkdir "terraform"
+$ touch terraform/private.auto.tfvars
+$ yc config list
+$ vim terraform/private.auto.tfvars
+$ bash cluster_yc_install.sh
+----
+
+После успешного выполнения команд, можем убедиться в сконфигурированном кластере
+
+=== Проверка кластера
+
+[source, bash]
+----
+$ cat kubespray/inventory/mycluster/artifacts/admin.conf > ~/.kube/config
+----
+
+== Установка Observability
+
+Установим helm-ом Observability tools(Prometheus, Grafana, Zipkin, ElasticSearch, Logstash, Kibana, Zipkin)
+
+[source, bash]
+----
+$ bash observability_install.sh
+  # grafana login admin, password prom-operator
+  # Подключение к grafana
+$ kubectl port-forward svc/obs-stack-grafana 8080:80 -n monitoring
+----
+
+
+=== Установка CSI
+
+Для CSI https://github.com/rancher/local-path-provisioner
+[source, bash]
+----
+$ kubectl apply -f https://raw.githubusercontent.com/rancher/local-path-provisioner/v0.0.26/deploy/local-path-storage.yaml
+----
+
+Для использование CSI на локальной тачке требуется указание storageClass="local-path"

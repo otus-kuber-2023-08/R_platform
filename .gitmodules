@@ -1,0 +1,6 @@
+[submodule "argo-repo"]
+	path = argo-repo
+	url = git@gitlab.com:otus-hw123/argocd.git
+[submodule "kubernetes-project/argo-repo"]
+	path = kubernetes-project/argo-repo
+	url = git@gitlab.com:otus-hw123/argocd.git

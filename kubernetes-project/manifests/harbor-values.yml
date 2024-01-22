@@ -1,0 +1,6 @@
+persistence:
+  enabled: false
+expose:
+  type: clusterIP
+  tls:
+    enabled: false
