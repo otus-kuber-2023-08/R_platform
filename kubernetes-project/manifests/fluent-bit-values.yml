@@ -1,4 +1,0 @@
-backend:
-  type: es
-  es:
-    host: elasticsearch-master

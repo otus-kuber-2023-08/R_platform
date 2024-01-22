@@ -1,6 +1,0 @@
-master:
-  persistence:
-    enabled: false
-data:
-  persistence:
-    enabled: false

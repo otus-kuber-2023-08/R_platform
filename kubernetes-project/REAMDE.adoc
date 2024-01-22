@@ -101,6 +101,7 @@ Doc Writer <maz.robert@mail.ru>
 .. Harbor
 .. Jaeger
 .. ArgoCD
+.. EFK configure
 .. Consul
 .. Vault
 .. Prometheus for application
@@ -109,4 +110,6 @@ Doc Writer <maz.robert@mail.ru>
 . Hashicorp Vault
 . Consul
 . CertManager?
+. Bash script for /etc/hosts
+. KubeAdmin?
 

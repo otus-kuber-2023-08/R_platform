@@ -17,9 +17,12 @@ spec:
       server: https://kubernetes.default.svc
     - namespace: kube-system
       server: https://kubernetes.default.svc
+    - namespace: artifactory
+      server: https://kubernetes.default.svc
   sourceRepos:
     - https://gitlab.com/otus-hw123/argocd.git
     - https://prometheus-community.github.io/helm-charts
+    - https://charts.bitnami.com/bitnami
 ---
 apiVersion: argoproj.io/v1alpha1
 kind: Application

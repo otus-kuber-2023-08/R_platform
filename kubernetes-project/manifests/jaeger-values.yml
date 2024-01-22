@@ -1,5 +1,0 @@
-storage:
-  # allowed values (cassandra, elasticsearch)
-  type: cassandra
-  cassandra:
-    host: jaeger-tracing-cassandra

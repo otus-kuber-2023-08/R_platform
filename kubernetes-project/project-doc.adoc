@@ -1,7 +1,7 @@
 = Инструкция по установке и настройке кластера
 
-
 == Установка зависимостей kubespray
+
 [source,bash]
 ----
 $ pip install -r kubespray/requirements.txt
@@ -22,30 +22,22 @@ $ bash cluster_yc_install.sh
 
 === Проверка кластера
 
-[source, bash]
+[source,bash]
 ----
 $ cat kubespray/inventory/mycluster/artifacts/admin.conf > ~/.kube/config
 ----
 
-== Установка Observability
+== Конфигурация кластера
 
-Установим helm-ом Observability tools(Prometheus, Grafana, Zipkin, ElasticSearch, Logstash, Kibana, Zipkin)
+Конфигурация происходит из argocd.
+Для конфигурации самой argocd нужно вызвать скрипт
 
-[source, bash]
+[source,bash]
 ----
-$ bash observability_install.sh
+$ bash configure_cluster.sh
   # grafana login admin, password prom-operator
   # Подключение к grafana
 $ kubectl port-forward svc/obs-stack-grafana 8080:80 -n monitoring
-----
-
-
-=== Установка CSI
-
-Для CSI https://github.com/rancher/local-path-provisioner
-[source, bash]
-----
-$ kubectl apply -f https://raw.githubusercontent.com/rancher/local-path-provisioner/v0.0.26/deploy/local-path-storage.yaml
 ----
 
 Для использование CSI на локальной тачке требуется указание storageClass="local-path"
