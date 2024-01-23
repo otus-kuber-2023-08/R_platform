@@ -41,3 +41,9 @@ $ kubectl port-forward svc/obs-stack-grafana 8080:80 -n monitoring
 ----
 
 Для использование CSI на локальной тачке требуется указание storageClass="local-path"
+
+== Vault
+
+== Kibana
+
+Kibana доступна после создания дашборда

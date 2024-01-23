@@ -19,6 +19,8 @@ spec:
       server: https://kubernetes.default.svc
     - namespace: artifactory
       server: https://kubernetes.default.svc
+    - namespace: infra
+      server: https://kubernetes.default.svc
   sourceRepos:
     - https://gitlab.com/otus-hw123/argocd.git
     - https://prometheus-community.github.io/helm-charts
@@ -42,7 +44,9 @@ spec:
     server: https://kubernetes.default.svc
     namespace: argo
   syncPolicy:
-    automated: {}
+    automated:
+      prune: true
+      selfHeal: true
     syncOptions:
       - CreateNamespace=true
       - ServerSideApply=true

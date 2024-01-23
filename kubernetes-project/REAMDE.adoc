@@ -96,20 +96,17 @@ Doc Writer <maz.robert@mail.ru>
 == TODO
 
 . 1 Node for infrastructure
-. ApplicationSet argocd
 . Configure
 .. Harbor
 .. Jaeger
-.. ArgoCD
-.. EFK configure
+.. +ArgoCD
+.. +EFK configure
 .. Consul
 .. Vault
 .. Prometheus for application
 .. Grafana dashboards for application
 . Configure Gitlab ci pipeline for application(push to installed registry)
-. Hashicorp Vault
-. Consul
-. CertManager?
+. Ingress(https://github.com/bitnami/charts/blob/main/bitnami/nginx-ingress-controller/README.md)
+. Зона роста(https://github.com/stevesea/argocd-helm-app-of-apps-example/blob/master/argocd-example-infra/values.yaml)
 . Bash script for /etc/hosts
-. KubeAdmin?
 
