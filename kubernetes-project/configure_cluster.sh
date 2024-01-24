@@ -5,11 +5,6 @@
 # Get latest kube config
 cat kubespray/inventory/sample/artifacts/admin.conf > ~/.kube/config
 
-# Create local path CSI
-kubectl apply -f https://raw.githubusercontent.com/rancher/local-path-provisioner/v0.0.26/deploy/local-path-storage.yaml
-
-# install argo
-helm upgrade --install -n argo --create-namespace argo bitnami/argo-cd --set global.storageClass=local-path
 # Configure argo
 kubectl apply -f manifests
 
@@ -26,3 +21,6 @@ kubectl apply -f manifests
 # todo set initial root Toeken here
 #kubectl -n infra exec -it vault-server-0 -- vault login
 #$(root_key)
+# cat inventory/sample/artifacts/admin.conf | grep server | sed 's/server: https:\/\///g' | sed 's/:6443//g' | sed 's/ //g'
+#export HOST_URL=$(cat inventory/sample/artifacts/admin.conf | grep server | sed 's/server: https:\/\///g' | sed 's/:6443//g' | sed 's/ //g')
+#echo $HOST_URL argocd.local prometheus.local grafana.local | sudo tee -a /etc/hosts

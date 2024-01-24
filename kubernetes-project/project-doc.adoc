@@ -47,3 +47,9 @@ $ kubectl port-forward svc/obs-stack-grafana 8080:80 -n monitoring
 == Kibana
 
 Kibana доступна после создания дашборда
+
+Fixing issue
+
+ error retrieving resource lock ingress-nginx/ingress-controller-leader: leases.coordination.k8s.io "ingress-controller-leader" is forbidden: User "system:serviceaccount:ingress-nginx:ingress-nginx" cannot get resource "leases" in API group "coordination.k8s.io" in the namespace "ingress-nginx"
+
+https://github.com/bitnami/charts/issues/11192
