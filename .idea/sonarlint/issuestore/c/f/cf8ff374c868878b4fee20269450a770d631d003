@@ -1,0 +1,8 @@
+
+tpython:S1192ô"VDefine a constant instead of duplicating this literal '10.90.0.2,192.168.0.2' 6 times.(Ş®ïıÿÿÿÿ
+tpython:S1192‹"VDefine a constant instead of duplicating this literal '10.90.0.4,192.168.0.4' 5 times.(––¥ûÿÿÿÿ
+npython:S1192ı"VDefine a constant instead of duplicating this literal '10.90.0.3,192.168.0.3' 4 times.(“ÓÍ
+opython:S1192Ü"VDefine a constant instead of duplicating this literal '10.90.0.5,192.168.0.5' 3 times.(™ù«Š
+?python:S5906”"&Consider using "assertIsNone" instead.(ÑØ“¯
+Cpython:S5906Ğ"%Consider using "assertNotIn" instead.(Âµâ‡ûÿÿÿÿ
+Cpython:S5906à"%Consider using "assertNotIn" instead.(Âµâ‡ûÿÿÿÿ

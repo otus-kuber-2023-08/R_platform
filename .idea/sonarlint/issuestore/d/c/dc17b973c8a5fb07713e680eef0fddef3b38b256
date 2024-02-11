@@ -1,0 +1,8 @@
+
+kpython:S1192á"RDefine a constant instead of duplicating this literal 'network.0.address' 3 times.(ùÔŒ¤
+9python:S34573"Remove this unused argument.(äüÄôýÿÿÿÿ
+qpython:S3776>"TRefactor this function to reduce its Cognitive Complexity from 29 to the 15 allowed.(É¶¤ˆüÿÿÿÿ
+Bpython:S5869e"*Remove duplicates in this character class.(Š¶£ü
+Kpython:S1481k".Replace unused local variable "name" with "_".(©†˜×þÿÿÿÿ
+Kpython:S1481w".Replace unused local variable "name" with "_".(©†˜×þÿÿÿÿ
+mpython:S3776‹"TRefactor this function to reduce its Cognitive Complexity from 17 to the 15 allowed.(âœ›ï

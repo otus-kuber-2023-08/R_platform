@@ -1,0 +1,9 @@
+
+Lkubernetes:S6864Ë"*Specify a memory limit for this container.(Òˆäóüÿÿÿÿ
+Lkubernetes:S6864à"*Specify a memory limit for this container.(“î›ðýÿÿÿÿ
+ukubernetes:S6865É"SSet automountServiceAccountToken to false for this specification of kind DaemonSet.(ý²º’ùÿÿÿÿ
+vkubernetes:S6865Þ"TSet automountServiceAccountToken to false for this specification of kind Deployment.(ý²º’ùÿÿÿÿ
+Mkubernetes:S6870Ë"+Specify a storage limit for this container.(Òˆäóüÿÿÿÿ
+Mkubernetes:S6870à"+Specify a storage limit for this container.(“î›ðýÿÿÿÿ
+Ikubernetes:S6869Ë"'Specify a CPU limit for this container.(Òˆäóüÿÿÿÿ
+Ikubernetes:S6869à"'Specify a CPU limit for this container.(“î›ðýÿÿÿÿ
