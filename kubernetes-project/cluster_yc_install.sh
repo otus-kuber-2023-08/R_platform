@@ -10,15 +10,13 @@ bash generate_credentials_velero.sh > ../kubespray_inventory/credentials-velero
 bash generate_etc_hosts.sh > ../kubespray_inventory/etc-hosts
 
 cd ../
-rm -rf kubespray/inventory/mycluster
-mkdir -p kubespray/inventory
-cp -rfp kubespray_inventory kubespray/inventory/mycluster
+cp -rfp kubespray_inventory/* kubespray/inventory/mycluster
 
 export ANSIBLE_HOST_KEY_CHECKING=False
 #ansible-playbook -i kubespray/inventory/mycluster/hosts.ini --key-file=/home/rmazitov/.ssh/id_rsa
 
 cd kubespray
-ansible-playbook -i inventory/mycluster/hosts.ini --become --become-user=root  --key-file=/home/rmazitov/.ssh/id_rsa  cluster.yml
+ansible-playbook -i inventory/mycluster/hosts.ini --key-file=/home/rmazitov/.ssh/id_rsa --become cluster.yml
 
 cd ../terraform
 MASTER_1_PRIVATE_IP=$(terraform output -json instance_group_masters_private_ips | jq -j ".[0]")

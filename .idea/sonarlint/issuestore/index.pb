@@ -3468,3 +3468,23 @@ G.idea/sonarlint/issuestore/0/e/0ec2fc1da8731851ecb52275c63f8a3eb66d2c9b,a/1/a1
 Q.idea/sonarlint/securityhotspotstore/f/e/fe21990c5ff751e082db24e2e555d6583ff79364,3/d/3dd1ae2b1bf413a89baaacaaa67e48f989d04f2c
 w
 G.idea/sonarlint/issuestore/f/e/fe21990c5ff751e082db24e2e555d6583ff79364,e/e/ee4e50a1154839f35a945eeb3f3182b2c18e7485
+u
+Ekubernetes-project/kubespray/inventory/mycluster/artifacts/admin.conf,d/1/d1196be57c792c51d77f2f96b9242958623c582e
+‰
+Ykubernetes-project/kubespray/.vagrant/provisioners/ansible/inventory/artifacts/admin.conf,c/f/cf355c0039ebcc493f07a881c9e43bd411211235
+‚
+Rkubernetes-project/kubespray/inventory/mycluster/group_vars/k8s_cluster/addons.yml,8/e/8e703d30dde784ca1f392a950fb4a3174b8daeb7
+j
+:kubernetes-project/kubespray/inventory/mycluster/hosts.ini,c/3/c378862addfdfb25dca1a2dd12c569676e3a57de
+z
+Jkubernetes-project/kubespray/inventory/mycluster/vagrant_ansible_inventory,8/0/8065adde609531de7fff30ed9d3ca2f976eff862
+n
+>kubernetes-project/kubespray/inventory/mycluster/inventory.ini,8/e/8e8403fdfb46780efb2370ff6a2180e30bfe1c73
+S
+#kubernetes-project/test-ingress.yml,d/2/d2a7de3e7166f968e3c7ce41d58d69df8d159966
+P
+ kubernetes-project/test/file.yml,2/3/2321413a8e5f3d8e2286df71e86e14fa9256a930
+P
+ kubernetes-project/test/added.md,2/4/24f455115b4c1090f39e1fa329914134e93e8c78
+Q
+!kubernetes-project/config/csi.yml,d/7/d751e995abb6af3340ae08a768e20b82df855274
