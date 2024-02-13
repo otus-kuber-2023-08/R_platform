@@ -3488,3 +3488,17 @@ P
  kubernetes-project/test/added.md,2/4/24f455115b4c1090f39e1fa329914134e93e8c78
 Q
 !kubernetes-project/config/csi.yml,d/7/d751e995abb6af3340ae08a768e20b82df855274
+`
+0kubernetes-project/terraform/.terraform.lock.hcl,8/4/849d611964c8ea7d0ba4f5e57878639280281c92
+T
+$kubernetes-project/terraform.tfstate,1/1/11d9b1ac9ce8ca14aa7af210f340b0056b1289d5
+Q
+!kubernetes-project/deploy-apps.sh,3/1/3189285d23a8512bc8306ec347b64b03a2f747ae
+i
+9kubernetes-project/architecture/docs/001-project-doc.adoc,3/2/32c510e518f6c7823d13b45ce2bc33d980fb3383
+]
+-kubernetes-project/architecture/workspace.dsl,e/e/eee69bbc0a4b8cc053b87d06076af540ac801b19
+^
+.kubernetes-project/architecture/workspace.json,b/1/b106fefbf50025ccff6e35ca79f1e27303ce6099
+Y
+)kubernetes-project/architecture/vault.svg,3/5/35c0de4cbdea875bfc68918935f26859a28a1d38

@@ -1,13 +1,28 @@
 = Инструкция по установке и настройке кластера
+Robert Mazitov
+:toc:
+:toc-title: Содержание
+
+== Загрузка манифестов
+
+Необходимо загрузить манифесты по https://github.com/otus-kuber-2023-08/R_platform[ссылке].
+
+Затем необходимо перейти в папку kubernetes-project.
+Дальнейшая настройка кластера будет произведена с этой папки, если иное не указано явно.
 
 == Установка зависимостей kubespray
+
+Установим необходимые утилиты и зависимости для запуска kubespray(ansible, vagrant, etc)
 
 [source,bash]
 ----
 $ pip install -r kubespray/requirements.txt
 ----
 
-== Настроим Terraform переменные для доступа к Yandex Cloud
+== Настройка Terraform переменных
+
+Для взаимодействия с Yandex Cloud Provider, требуется получить учетные данные(нужна установленная утилита yc).
+Для этого нужно выполнить следующие команды.
 
 [source,bash]
 ----
@@ -18,14 +33,17 @@ $ vim terraform/private.auto.tfvars
 $ bash cluster_yc_install.sh
 ----
 
-После успешного выполнения команд, можем убедиться в сконфигурированном кластере
+После успешного выполнения команд, можно убедиться в сконфигурированном кластере
 
 === Проверка кластера
 
 [source,bash]
 ----
-$ cat kubespray/inventory/mycluster/artifacts/admin.conf > ~/.kube/config
+$ ssh ubuntu@<master-ip>
+$ sudo cat /etc/kubernetes/admin.conf
 ----
+
+Полученный конфиг установить на свою машину по пути ~/.kube/config
 
 == Конфигурация кластера
 
@@ -35,9 +53,6 @@ $ cat kubespray/inventory/mycluster/artifacts/admin.conf > ~/.kube/config
 [source,bash]
 ----
 $ bash configure_cluster.sh
-  # grafana login admin, password prom-operator
-  # Подключение к grafana
-$ kubectl port-forward svc/obs-stack-grafana 8080:80 -n monitoring
 ----
 
 Для использование CSI на локальной тачке требуется указание storageClass="local-path"
@@ -64,20 +79,37 @@ https://github.com/bitnami/charts/issues/11192
 Для логирования используется EFK стек.
 На каждой ноде установлен агент для сбора логов
 
-== Дополнительная информация про вашу платформу
+Просмотр дашбордов Grafana доступен следующим способом
+
+[source,bash]
+----
+$ kubectl port-forward svc/obs-stack-grafana 8080:80 -n monitoring
+----
+
+== Дополнительная информация про платформу
 
 PredProduction Ready платформа Kubernetes.
 Почти Cloud Agnostic решение, за исключением Yandex Load Balancer, Terraform, CSI
 
 Имеются необходимые базовые сервисы:
 
-. CI - Gitlab CI
-. CD - ArgoCD
-. Monitoring - Prometheus+Grafana
-. Logging - Elasticsearch, FluentD, Kibana stack
-. Tracing - Jaeger
-. Secret management - Hashicorp vault
-. Config management - Consul
-. Registry - Registry
-. Ingress - kubespray enabled addon nginx-ingress-controller
-. CSI - After cluster installed, will be installed csi(ru.yandex.s3.csi)
+. *CI* - Gitlab CI
+. *CD* - ArgoCD
+. *Monitoring* - Prometheus+Grafana
+. *Logging* - Elasticsearch, FluentD, Kibana stack
+. *Tracing* - Jaeger
+. *Secret management* - Hashicorp vault
+. *Config management* - Consul
+. *Registry* - Registry
+. *Ingress* - kubespray enabled addon nginx-ingress-controller
+. *CSI* - After cluster installed, will be installed csi(ru.yandex.s3.csi)
+
+== Архитектура
+
+image::embed:Deployment-001[]
+
+== TODO
+
+. Configure frontend ingress
+. Fix jaeger
+. Add ci pipeline for applications

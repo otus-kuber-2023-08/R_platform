@@ -5,8 +5,8 @@ metadata:
   namespace: kube-system
   name: csi-s3-secret
 stringData:
-  accessKeyID: "YCAJEjwFnnJFjQyDeFG0zMxsx"
-  secretAccessKey: "YCM1SdkaZjqdEDup2mrTPPC14sHh_I1PHh7c0tGu"
+  accessKeyID: "555"
+  secretAccessKey: "555"
   endpoint: "https://storage.yandexcloud.net"
 ---
 kind: StorageClass
