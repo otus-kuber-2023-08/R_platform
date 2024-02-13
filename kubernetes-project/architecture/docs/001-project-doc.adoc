@@ -110,6 +110,4 @@ image::embed:Deployment-001[]
 
 == TODO
 
-. Configure frontend ingress
-. Fix jaeger
 . Add ci pipeline for applications

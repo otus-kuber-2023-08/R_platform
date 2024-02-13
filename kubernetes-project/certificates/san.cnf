@@ -1,0 +1,20 @@
+[req]
+distinguished_name = req_distinguished_name
+req_extensions = v3_req
+prompt = no
+
+[req_distinguished_name]
+C = ru
+ST = Moscow
+L = Moscow
+O = Organization
+CN = CommonName
+
+[v3_req]
+subjectAltName = @alt_names
+
+[alt_names]
+DNS.1 = argocd.local
+DNS.2 = DNS.consul-ui.local
+DNS.3 = kibana.local
+DNS.4 = grafana.local

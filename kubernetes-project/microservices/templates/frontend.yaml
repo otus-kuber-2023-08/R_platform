@@ -124,22 +124,6 @@ spec:
     targetPort: 8080
 {{- if .Values.frontend.externalService }}
 ---
-apiVersion: v1
-kind: Service
-metadata:
-  name: {{ .Values.frontend.name }}-external
-  namespace: {{ .Release.Namespace }}
-spec:
-  type: LoadBalancer
-  selector:
-    app: {{ .Values.frontend.name }}
-  ports:
-  - name: http
-    port: 80
-    targetPort: 8080
-{{- end }}
-{{- if .Values.networkPolicies.create }}
----
 apiVersion: networking.k8s.io/v1
 kind: NetworkPolicy
 metadata:
@@ -257,3 +241,22 @@ spec:
           number: 80
 {{- end }}
 {{- end }}
+---
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: {{ .Values.frontend.name }}
+  namespace: {{ .Release.Namespace }}
+spec:
+  rules:
+    - host: frontend.local
+      http:
+        paths:
+          - backend:
+              service:
+                name: frontend
+                port:
+                  number: 80
+            path: /
+            pathType: Prefix
+---
