@@ -3476,16 +3476,6 @@ Ykubernetes-project/kubespray/.vagrant/provisioners/ansible/inventory/artifacts/
 Rkubernetes-project/kubespray/inventory/mycluster/group_vars/k8s_cluster/addons.yml,8/e/8e703d30dde784ca1f392a950fb4a3174b8daeb7
 j
 :kubernetes-project/kubespray/inventory/mycluster/hosts.ini,c/3/c378862addfdfb25dca1a2dd12c569676e3a57de
-z
-Jkubernetes-project/kubespray/inventory/mycluster/vagrant_ansible_inventory,8/0/8065adde609531de7fff30ed9d3ca2f976eff862
-n
->kubernetes-project/kubespray/inventory/mycluster/inventory.ini,8/e/8e8403fdfb46780efb2370ff6a2180e30bfe1c73
-S
-#kubernetes-project/test-ingress.yml,d/2/d2a7de3e7166f968e3c7ce41d58d69df8d159966
-P
- kubernetes-project/test/file.yml,2/3/2321413a8e5f3d8e2286df71e86e14fa9256a930
-P
- kubernetes-project/test/added.md,2/4/24f455115b4c1090f39e1fa329914134e93e8c78
 Q
 !kubernetes-project/config/csi.yml,d/7/d751e995abb6af3340ae08a768e20b82df855274
 `
