@@ -1,0 +1,2 @@
+cd kubespray
+vagrant up

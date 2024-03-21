@@ -1,0 +1,113 @@
+= Инструкция по установке и настройке кластера
+Robert Mazitov
+:toc:
+:toc-title: Содержание
+
+== Загрузка манифестов
+
+Необходимо загрузить манифесты по https://github.com/otus-kuber-2023-08/R_platform[ссылке].
+
+Затем необходимо перейти в папку kubernetes-project.
+Дальнейшая настройка кластера будет произведена с этой папки, если иное не указано явно.
+
+== Установка зависимостей kubespray
+
+Установим необходимые утилиты и зависимости для запуска kubespray(ansible, vagrant, etc)
+
+[source,bash]
+----
+$ pip install -r kubespray/requirements.txt
+----
+
+== Настройка Terraform переменных
+
+Для взаимодействия с Yandex Cloud Provider, требуется получить учетные данные(нужна установленная утилита yc).
+Для этого нужно выполнить следующие команды.
+
+[source,bash]
+----
+$ mkdir "terraform"
+$ touch terraform/private.auto.tfvars
+$ yc config list
+$ vim terraform/private.auto.tfvars
+$ bash cluster_yc_install.sh
+----
+
+После успешного выполнения команд, можно убедиться в сконфигурированном кластере
+
+=== Проверка кластера
+
+[source,bash]
+----
+$ ssh ubuntu@<master-ip>
+$ sudo cat /etc/kubernetes/admin.conf
+----
+
+Полученный конфиг установить на свою машину по пути ~/.kube/config
+
+== Конфигурация кластера
+
+Конфигурация происходит из argocd.
+Для конфигурации самой argocd нужно вызвать скрипт
+
+[source,bash]
+----
+$ bash configure_cluster.sh
+----
+
+Для использование CSI на локальной тачке требуется указание storageClass="local-path"
+
+== Kibana
+
+Kibana доступна после создания дашборда
+
+Fixing issue
+
+ error retrieving resource lock ingress-nginx/ingress-controller-leader: leases.coordination.k8s.io "ingress-controller-leader" is forbidden: User "system:serviceaccount:ingress-nginx:ingress-nginx" cannot get resource "leases" in API group "coordination.k8s.io" in the namespace "ingress-nginx"
+
+https://github.com/bitnami/charts/issues/11192
+
+== Описание интеграции с CI/CD-сервисом
+
+После запуска кластера ci/cd конфигурация подтягивается автоматически
+
+== Подход к организации мониторинга и логирования
+
+Мониторинг реализован на стандартном решении prometheus+Grafana.
+Имеются предустановленные дашборды для слежения за состоянием кластера
+
+Для логирования используется EFK стек.
+На каждой ноде установлен агент для сбора логов
+
+Просмотр дашбордов Grafana доступен следующим способом
+
+[source,bash]
+----
+$ kubectl port-forward svc/obs-stack-grafana 8080:80 -n monitoring
+----
+
+== Дополнительная информация про платформу
+
+PredProduction Ready платформа Kubernetes.
+Почти Cloud Agnostic решение, за исключением Yandex Load Balancer, Terraform, CSI
+
+Имеются необходимые базовые сервисы:
+
+. *CI* - Gitlab CI
+. *CD* - ArgoCD
+. *Monitoring* - Prometheus+Grafana
+. *Logging* - Elasticsearch, FluentD, Kibana stack
+. *Tracing* - Jaeger
+. *Secret management* - Hashicorp vault
+. *Config management* - Consul
+. *Registry* - Registry
+. *Ingress* - kubespray enabled addon nginx-ingress-controller
+. *CSI* - After cluster installed, will be installed csi(ru.yandex.s3.csi)
+
+== Архитектура
+
+image::embed:Deployment-001[]
+
+== TODO
+
+. Add ci pipeline for applications

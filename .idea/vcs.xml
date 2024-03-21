@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="VcsDirectoryMappings">
+    <mapping directory="" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/consul-k8s" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/kubernetes-project/argo-repo" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/kubernetes-vault/vault-guides" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/kubernetes-vault/vault-helm" vcs="Git" />
+  </component>
+</project>

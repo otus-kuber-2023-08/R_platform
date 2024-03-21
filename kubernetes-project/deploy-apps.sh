@@ -1,0 +1,1 @@
+helm upgrade --install -n application --create-namespace microservices-1707800718 ./microservices

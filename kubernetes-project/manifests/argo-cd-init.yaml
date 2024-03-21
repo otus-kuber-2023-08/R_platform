@@ -1,0 +1,88 @@
+apiVersion: v1
+kind: Secret
+metadata:
+  name: sancertificate-tls
+  namespace: argocd
+data:
+  tls.crt: LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSURzRENDQXBpZ0F3SUJBZ0lVVHRqRitGUDhnaGJ6MUhQQng2clR0d2FlSE1rd0RRWUpLb1pJaHZjTkFRRUwKQlFBd1d6RUxNQWtHQTFVRUJoTUNjblV4RHpBTkJnTlZCQWdNQmsxdmMyTnZkekVQTUEwR0ExVUVCd3dHVFc5egpZMjkzTVJVd0V3WURWUVFLREF4UGNtZGhibWw2WVhScGIyNHhFekFSQmdOVkJBTU1Da052YlcxdmJrNWhiV1V3CkhoY05NalF3TWpFek1EWXhOVEU1V2hjTk1qVXdNakV5TURZeE5URTVXakJiTVFzd0NRWURWUVFHRXdKeWRURVAKTUEwR0ExVUVDQXdHVFc5elkyOTNNUTh3RFFZRFZRUUhEQVpOYjNOamIzY3hGVEFUQmdOVkJBb01ERTl5WjJGdQphWHBoZEdsdmJqRVRNQkVHQTFVRUF3d0tRMjl0Ylc5dVRtRnRaVENDQVNJd0RRWUpLb1pJaHZjTkFRRUJCUUFECmdnRVBBRENDQVFvQ2dnRUJBTVV5YzRETXI1V28zbmhzRXJxT3JCbnphR2pwLy8yR3ZqSWlXTGhBbGE3ejZZSzEKR3pXbmhxMDNtSkljdWZ3QldqSXlZK1B1K2JrWEdHZTJCdU9ZTEt1T09LdGNPR3FaVGpzVXdIeURFWElNU28zagpzdkduYkFTSmQrQXlvaXlyWHhMVjNOc2lLMndrREhDNGRWS0xyV2RxN3ByakpZWlNTbUxSMmREWG52WXc3d0VXClZCYy9QQk4zVWNOOUNUZE5vYnVLVjh1ckFqSWt5bTVqRXdXVGdEWUhPekp5a2RYVllzMCtQR21CRytPaGlzQzQKTElsZno3dnY3dWdVL3RodlVJZTlnRm83Z2s0L0NIc1ZWcW03b2dlMlplc0d5aDlIRzYwRVdzL2ZPNlI5aHFWQgpzbkdDTTZIbjBBOGtrN0pwRnNZMHVxaTgyMTBvcU5NWnI1VlZEWnNDQXdFQUFhTnNNR293U1FZRFZSMFJCRUl3ClFJSU1ZWEpuYjJOa0xteHZZMkZzZ2hORVRsTXVZMjl1YzNWc0xYVnBMbXh2WTJGc2dneHJhV0poYm1FdWJHOWoKWVd5Q0RXZHlZV1poYm1FdWJHOWpZV3d3SFFZRFZSME9CQllFRkNQdnJtNkRWVGlQVkMzWS9nMi9hTjF1SktEUQpNQTBHQ1NxR1NJYjNEUUVCQ3dVQUE0SUJBUUNQNjFmZzZDR2FwUkxTaG5pRFM3VjFiNmwyWjBrYUtheWNycGx2ClNNdU1QUmJzeGIrOUM0U1dvOU14WDJQRGhHcG1IY0FoN2o5VGtobUZoTjlYbzFOemVDdDd0M3dUTkFuWjNjLzEKckRRMHJuSFNtMmJvazFJWEh6OGpPQ1FyV1RkMFZ6UWtEUkw5T1BPT0pzT3FmM3h0MEhQU25PT2NWNklSZ0dDRgpvUklyS3hiejAwTUJVd2kwcmlkM0lKa1Z3dUtaYTNrdUQwd1ZQZzF2aUhHbW41RThCNkwxSkVEVG1vZVlMazk3CnArK2Nwbjl3Vm9tSGJwdWFieEJyZWpveW8ySkVjRnd0eE56RkFxemZyL3pjYVc1NlpwV3pYV3JqamVMOVFpbFYKaG05Z2loa3BiUHVoUEhLRHdKeDArS3hadVd2RGtZbGwwVjlhaGxRK1pVcnMwMjQ3Ci0tLS0tRU5EIENFUlRJRklDQVRFLS0tLS0K
+  tls.key: LS0tLS1CRUdJTiBQUklWQVRFIEtFWS0tLS0tCk1JSUV2UUlCQURBTkJna3Foa2lHOXcwQkFRRUZBQVNDQktjd2dnU2pBZ0VBQW9JQkFRREZNbk9BeksrVnFONTQKYkJLNmpxd1o4MmhvNmYvOWhyNHlJbGk0UUpXdTgrbUN0UnMxcDRhdE41aVNITG44QVZveU1tUGo3dm01Rnhobgp0Z2JqbUN5cmpqaXJYRGhxbVU0N0ZNQjhneEZ5REVxTjQ3THhwMndFaVhmZ01xSXNxMThTMWR6YklpdHNKQXh3CnVIVlNpNjFuYXU2YTR5V0dVa3BpMGRuUTE1NzJNTzhCRmxRWFB6d1RkMUhEZlFrM1RhRzdpbGZMcXdJeUpNcHUKWXhNRms0QTJCenN5Y3BIVjFXTE5QanhwZ1J2am9ZckF1Q3lKWDgrNzcrN29GUDdZYjFDSHZZQmFPNEpPUHdoNwpGVmFwdTZJSHRtWHJCc29mUnh1dEJGclAzenVrZllhbFFiSnhnak9oNTlBUEpKT3lhUmJHTkxxb3ZOdGRLS2pUCkdhK1ZWUTJiQWdNQkFBRUNnZ0VBVXI0dm51ekVCQzBlWkRNY3pMRE8zL2kxWjhoQUJMWkVHaTgxUU9MQXErOW0Kbk5TM1BSVTFPbnRvaG02TlQ0T1Z3QmhLdDdwdmlFMTdqUkRnNVNEV0pZb0FsMDZUMFk3UU41UW1qRmhHdXE4VApuV1Bja3U5b01LTXA3S1h5VElILzI1eG5Gbi9JN3BCVnMvcUNLQWU1MC9vWGNtQTdQNWhKNUJzZnBUVEVXNUpDCkhIYjYxeFVmZjk0NlRYYzlYQ0FJcEVaNmNtbFk4aTA0R085emdqaG16Lzg3Y2NqOEw2emNnSGpUb0dWSUtGVDYKeXRVUG1lZXA3d0lSTWhaMmk2VFE1MWZUaklxYUYybnVIWElPYXJnU3oyS3lUQXkvcWh1c2JnRkh3TVdoQWpCRApsYlcvL2VtRVpIRDVhb2gxRWtMU3MwQm5vRVB4Um1zS0NtMWhQeWFBRVFLQmdRRFpFeUVmZVFrNElCTEw2RjZJCkpvOVEwZXNJZ2RzaElQZXZyV1JFbzV2eVE3cFBPS0NRTVE1MGsyV2xzVHMxZTRTRHhzV1Z2SVpPaC8xQ1hZVngKUUZjY1BOWlZHVDNEbjQrQUFwY3M3aHl5RlFoSjFPaFk5VlY3cDJJaEoxK3JVQ0l4L0xZQWlmWXY0N2JxMDVrSQpKc1QxS2VrMG9DSmRNZUVWVkwvcDJnMTNXUUtCZ1FEb2p0VlBBQmMyNUZ4SVRnbjg0SjZManlJdksveU5RancvCmx3RTBNWlBTZjFhQm9sT0p3Q3lkcGxYSDhpMjFmNkN5MjZ5NklUcFRBemp1SzltTVFLZ3lpbnJId0ZMOFE1dkIKUTVYekxDT3M3elpZeTZsalVCQVVuY1ZtQkdOYnR0M1oyNkg1cFdZUkNZVDlKTkFKeXhPYVRueGZESDFTUlpFRgo5VHpMa0VxQ0V3S0JnUUMvbnI5U2hRbTZYYlc2QWpuUWZobHRBcUV6TlU0MmhGK2cyTEwyVkdiSkNUaGh6bDhPCmFmK1VzTGk5OXlHSktLdmxsNFc3bEZ3SzNzaVYyUEIrOUlqeENGTTdjN2l1QXlBdHBCdkhNYnByQ1YzenJ0b2MKRFJXVXZrRkZldmhjeGJRcDVDYlZldk96ZXBSeDNxL3NIaTBuTGdRS3pJRUpPNHF4eGNwVHFJVFNvUUtCZ0ZMZQpPc0pZM096UmVOVEhBaVliQUVQb3NCeXhCdUJySHI3bUZ5YTdGOXFsUjNVUUc4WjFOVERFQ2NNaTJBalp2ckNkCk9MSm1qcnJ2NWdSd21hZXhqbjNiL0o1Yk9QYnRQSDRra0RWRG9EN0tTc3BmWUMra1l1YUZ4Y1p4ZjlvNWtscEUKT2phVUtvZWRwY2J5ckRNaEt3NE1NNk5HOXcwdS90dHBwTTFBMEZ3REFvR0FJVENRVjVwQXFWRFo5bzhrcjNzSApOVWl5bVpINkVDRWkycTVaakQwZ0MwUTZlRHpFOWhFd21vay9tZ0RkQTV6bHBEcFN5Y1BQV1NmYUNEUUNsR2dmCjZ0RnhwRU9MeS9rWFRZU0VQdUdlYmFzb3ZPU0l6WHBuNEdaam9QV20zWlF3QXdmSzBUaTBVSVJuNk9tdnQyNXUKL3dmV2ZxbWtnR2hqZE9zcHY3Yi9aZzg9Ci0tLS0tRU5EIFBSSVZBVEUgS0VZLS0tLS0K
+type: kubernetes.io/tls
+---
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: registry
+  namespace: argocd
+  annotations:
+    nginx.ingress.kubernetes.io/ssl-redirect: "false"
+    nginx.ingress.kubernetes.io/backend-protocol: "HTTPS"
+spec:
+  tls:
+    - hosts:
+        - argocd.local
+      secretName: sancertificate-tls
+  rules:
+    - host: argocd.local
+      http:
+        paths:
+          - backend:
+              service:
+                name: argocd-server
+                port:
+                  number: 443
+            path: /
+            pathType: Prefix
+---
+apiVersion: argoproj.io/v1alpha1
+kind: AppProject
+metadata:
+  name: argocd
+  namespace: argocd
+spec:
+  description: project for management of Argo CD itself
+  # some of my apps within argocd project need to create cluster resources
+  clusterResourceWhitelist:
+    - group: '*'
+      kind: '*'
+  destinations:
+    - namespace: observability
+      server: https://kubernetes.default.svc
+    - namespace: argocd
+      server: https://kubernetes.default.svc
+    - namespace: argo
+      server: https://kubernetes.default.svc
+    - namespace: kube-system
+      server: https://kubernetes.default.svc
+    - namespace: artifactory
+      server: https://kubernetes.default.svc
+    - namespace: infra
+      server: https://kubernetes.default.svc
+  sourceRepos:
+    - https://gitlab.com/otus-hw123/argocd.git
+    - https://prometheus-community.github.io/helm-charts
+    - https://charts.bitnami.com/bitnami
+---
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: cluster
+  namespace: argocd
+spec:
+  project: argocd
+  source:
+    repoURL: https://gitlab.com/otus-hw123/argocd.git
+    targetRevision: HEAD
+    path: infra
+    helm:
+      valueFiles:
+        - values.yaml
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: argocd
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+      - CreateNamespace=true
+      - ServerSideApply=true
